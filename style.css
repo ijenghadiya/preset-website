@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --base-font-size: 16px;
+  --brand-font: 'La Belle Aurore', cursive;
+  --navbar-font: 'Quicksand', sans-serif;
+  --theme-color-background: rgba(250, 250, 250, 1);
+  --theme-color-primary: rgba(33, 33, 33, 1);
+  --theme-color-secondary: rgba(199, 165, 0, 1);
+  --placeholder-border: 0.1rem solid rgba(33, 33, 33, 0);
+  --centering-margin: 0 auto;
+  --standard-margin: 4vmin;
+  --standard-padding: 0.5vmin;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  background-color: var(--theme-color-background);
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  margin: var(--centering-margin);
+}
+
+header {
+  margin: var(--centering-margin);
+  padding: 0rem;
+}
+
+.top-header {
+  margin: var(--centering-margin);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.social-media-links {
+  flex: 1;
+  margin: var(--standard-margin);
+  padding-top: calc(var(--standard-padding) * 5);
+  padding-left: calc(var(--standard-padding) * 4);
+  padding-right: calc(var(--standard-padding) * 4);
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  color: var(--theme-color-secondary);
+}
+
+.social-media-links a {
+  padding-left: calc(var(--standard-padding) * 1.25);
+  padding-right: calc(var(--standard-padding) * 1.25);
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  color: var(--theme-color-primary);
+}
+
+.social-media-links a:link {
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  color: var(--theme-color-primary);
+}
+
+.social-media-links a:visited {
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  color: var(--theme-color-primary);
+}
+
+.branding {
+  flex: 2;
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+  text-align: center;
+  font-family: var(--brand-font);
+  background-color: var(--theme-color-background);
+  color: var(--theme-color-primary);
+  font-size: clamp(100%, 3rem + 2vw, 3rem);
+}
+
+.search {
+  flex: 1;
+  margin: var(--standard-margin);
+  padding-top: calc(var(--standard-padding) * 5);
+  padding-left: calc(var(--standard-padding) * 4);
+  padding-right: calc(var(--standard-padding) * 4);
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  font-family: var(--navbar-font);
+  color: var(--theme-color-secondary);
+}
+
+.search input {
+  border: var(--placeholder-border);
+  border-radius: 0.5rem;
+  background-color: var(--theme-color-background);
+  color: var(--theme-color-primary);
+}
+
+.search input:focus {
+  border: 0.1rem solid var(--theme-color-secondary);
+  border-radius: 0.5rem;
+  background-color: var(--theme-color-background);
+  color: var(--theme-color-primary);
+}
+
+.search button {
+  background-color: var(--theme-color-background);
+  border: var(--placeholder-border);
+  border-radius: 0.5rem;
+  color: var(--theme-color-primary);
+}
+
+.nav {
+  display: block;
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+  padding-bottom: var(--standard-padding);
+  text-align: center;
+  font-family: var(--navbar-font);
+}
+
+/* Style the links inside the pill navigation menu */
+.nav a {
+  display: inline-block;
+  padding-left: calc(var(--standard-padding) * 4);
+  padding-right: calc(var(--standard-padding) * 4);
+  text-align: center;
+  color: var(--theme-color-primary);
+  text-decoration: none;
+}
+
+/* Change the color of links on mouse-over */
+.nav a:hover {
+  display: inline-block;
+  padding-left: calc(var(--standard-padding) * 4);
+  padding-right: calc(var(--standard-padding) * 4);
+  text-align: center;
+  color: var(--theme-color-primary);
+  text-decoration: overline;
+  text-decoration-color: var(--theme-color-secondary);
+  text-decoration-thickness: 0.2rem;
+}
+
+/* Add a color to the active/current link */
+.nav a.active {
+  display: inline-block;
+  padding-left: calc(var(--standard-padding) * 4);
+  padding-right: calc(var(--standard-padding) * 4);
+  text-align: center;
+  color: var(--theme-color-background);
+  background-color: var(--theme-color-primary);
+  border: 0.2rem solid var(--theme-color-primary);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--standard-padding);
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 100%;
+  max-width: 100%;
+  padding: var(--standard-padding);
+}
+
+.column img {
+  margin-top: var(--standard-margin);
+  margin-bottom: var(--standard-margin);
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+}
