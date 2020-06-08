@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --base-font-size: 16px;
   --brand-font: 'La Belle Aurore', cursive;
   --navbar-font: 'Quicksand', sans-serif;
+  --other-font: 'Montserrat', sans-serif;
   --theme-color-background: rgba(250, 250, 250, 1);
   --theme-color-primary: rgba(33, 33, 33, 1);
   --theme-color-secondary: rgba(199, 165, 0, 1);
   --placeholder-border: 0.1rem solid rgba(33, 33, 33, 0);
+  --shadow-dark: rgba(33, 33, 33, 0.30);
   --centering-margin: 0 auto;
   --standard-margin: 4vmin;
   --standard-padding: 0.5vmin;
@@ -68,8 +71,8 @@ header {
 
 .branding {
   flex: 2;
-  margin-top: var(--standard-margin);
-  margin-bottom: var(--standard-margin);
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: var(--standard-padding);
   padding-right: var(--standard-padding);
   text-align: center;
@@ -129,7 +132,7 @@ header {
 .nav {
   display: none;
   justify-content: space-evenly;
-  margin-top: var(--standard-margin);
+  margin-top: 0;
   padding-top: var(--standard-padding);
   padding-bottom: var(--standard-padding);
   align-items: center;
@@ -211,6 +214,43 @@ header {
   .social-media-links {
     display: flex;
   }
+}
+
+.shopping-grid {
+  font-family: var(--other-font);
+  margin: var(--standard-margin);
+  padding: var(--standard-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4vmin;
+  gap: 4vmin;
+}
+
+.card {
+  background-color: white;
+  border: 0.2rem solid var(--placeholder-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 14px 0 var(--shadow-dark);
+}
+
+.card img {
+  border: 0.2rem solid var(--placeholder-border);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.card h2,
+.card p {
+  margin: var(--standard-margin);
+  padding: var(--standard-padding);
+  text-align: center;
+}
+
+.card h2 {
+  font-weight: 500;
 }
 
 .row {
