@@ -219,7 +219,7 @@ header {
 .shopping-grid {
   font-family: var(--other-font);
   margin: var(--standard-margin);
-  padding: var(--standard-padding);
+  padding: calc(var(--standard-padding) * 6);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 4vmin;
@@ -230,7 +230,13 @@ header {
   background-color: white;
   border: 0.2rem solid var(--placeholder-border);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 14px 0 var(--shadow-dark);
+  box-shadow: 0 10px 14px 0 var(--shadow-dark);
+  /*padding: calc(var(--standard-padding) * 6);*/
+  width: 85%;
+  transition: 0.4s;}
+
+.card:hover{
+  box-shadow: 0 30px 48px 0 var(--shadow-dark);
 }
 
 .card img {
@@ -274,6 +280,8 @@ header {
   height: auto;
 }
 
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -308,3 +316,4 @@ ul {
 li {
   display: inline;
 }
+
