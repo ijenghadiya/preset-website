@@ -1,0 +1,130 @@
+@use postcss-nested;
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --base-font-size: 16px;
+  --brand-font: 'La Belle Aurore', cursive;
+  --navbar-font: 'Quicksand', sans-serif;
+  --other-font: 'Montserrat', sans-serif;
+  --theme-color-background: rgba(250, 250, 250, 1);
+  --theme-color-primary: rgba(33, 33, 33, 1);
+  --theme-color-secondary: rgba(199, 165, 0, 1);
+  --placeholder-border: 0.1rem solid rgba(33, 33, 33, 0);
+  --shadow-dark: rgba(33, 33, 33, 0.30);
+  --centering-margin: 0 auto;
+  --standard-margin: 4vmin;
+  --standard-padding: 0.5vmin;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+body {
+    background-color: #faebd7;
+    color: #4e5e72;
+    text-align: center;
+    font-family: monospace;
+    overflow: hidden;
+    font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+    margin: var(--centering-margin);
+    padding: var(--standard-padding);
+  }
+
+  h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 2rem;
+    font-family: 'Dancing Script';
+    color: black;
+  }
+  small {
+    display: block;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    transition: opacity 0.33s;
+  }
+  textarea, input, button {
+    line-height: 1.5rem;
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    appearance: none;
+  }
+  textarea, input {
+    color: #4e5e72;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+  }
+  textarea {
+    width: 100%;
+    height: 8rem;
+    resize: none;
+   }
+   input {
+    width: 50%;
+    margin-bottom: 1rem;
+   }
+
+   button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+     &:hover,:focus {
+       outline: none;
+       background-color: rgba(78, 94, 114, 1);
+     }
+   }
+
+   input[type=text]:focus,
+   input[type=email]:focus,
+   textarea:focus {
+     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78, 94, 114, 0.3)' x='0' y='23' width='10' height='1'/></svg>");
+     outline: none;
+   }
+   .wrapper {
+     width: 35rem;
+     background-color: white;
+   }
+   .letter {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 5rem;
+     width: 30rem;
+     margin: auto;
+     perspective: 60rem;
+   }
+
+   .side {
+    height: 12rem;
+    background-color: #fcfcf8;
+    outline: 1px solid transparent;
+
+      
+  }
+  
+  .side:nth-of-type(1) {
+    padding: 2rem 2rem 0;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+  }
+  .side:nth-of-type(2) {
+    padding: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
+    text-align: right;
+  }
+
+  
