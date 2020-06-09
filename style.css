@@ -237,7 +237,7 @@ main {
   margin: var(--standard-margin);
   padding: var(--standard-padding);
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 2fr, 1fr;
   grid-gap: 2vmin;
   gap: 2vmin;
 }
@@ -302,9 +302,11 @@ main {
   margin: var(--standard-margin);
   padding: var(--standard-padding);
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
   grid-gap: 2vmin;
   gap: 2vmin;
+  width: auto;
+  height: auto;
 }
 
 .picture-grid img {
@@ -409,6 +411,11 @@ main {
     gap: 2vmin;
   }
 
+  .picture-text div {
+    padding: 0rem;
+    margin: 0rem;
+  }
+
   .picture-text form {
     text-align: center;
     display: flex;
@@ -419,7 +426,7 @@ main {
     margin: var(--standard-margin);
     padding: var(--standard-padding);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2vmin;
     gap: 2vmin;
   }
