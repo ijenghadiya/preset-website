@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --base-font-size: 16px;
+  --brand-font: 'La Belle Aurore', cursive;
+  --navbar-font: 'Quicksand', sans-serif;
+  --other-font: 'Montserrat', sans-serif;
+  --theme-color-background: rgba(250, 250, 250, 1);
+  --theme-color-primary: rgba(33, 33, 33, 1);
+  --theme-color-secondary: rgba(199, 165, 0, 1);
+  --placeholder-border: 0.1rem solid rgba(33, 33, 33, 0);
+  --shadow-dark: rgba(33, 33, 33, 0.30);
+  --shadow-secondary: rgba(199, 165, 0, 0.30);
+  --centering-margin: 0 auto;
+  --standard-margin: 4vmin;
+  --standard-padding: 0.5vmin;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  background-color: var(--theme-color-background);
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  margin: var(--centering-margin);
+}
+
+.grid{
+    margin: calc(var(--standard-margin) * 2);
+    padding: var(--standard-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4vmin;
+    gap: 4vmin;
+}   
+
+.image{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.info{
+    width: 100%;
+    float: right;
+    display: inline;
+    font-family: var(--other-font);
+    font-weight: 300;
+}
+
+.image img{
+    width: 600px;
+    height: 500px;
+}
+
+.square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #fa5a5a 100%, #ffffff 100%);
+    background-image: linear-gradient(45deg, #fa5a5a 100%, #ffffff 100%);
+    transition: .4s;
+}
+
+.square_btn:hover{
+    background-image: -webkit-linear-gradient(45deg, #e73838 50%, #ffffff 100%);
+    background-image: linear-gradient(45deg, #e73838 50%, #ffffff 100%);
+}
