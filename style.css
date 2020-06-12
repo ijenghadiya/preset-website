@@ -195,24 +195,30 @@ header {
 .shopping-grid {
   font-family: var(--other-font);
   margin: var(--standard-margin);
-  padding: calc(var(--standard-padding) * 6);
+  padding: var(--standard-padding);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 4vmin;
   gap: 4vmin;
+  /*margin-left: calc(var(--standard-margin) * 4);*/
+
+}
+
+main{
+  margin: var(--standard-margin);
 }
 
 .card {
   background-color: white;
   border: 0.2rem solid var(--placeholder-border);
   border-radius: 0.5rem;
-  box-shadow: 0 10px 14px 0 var(--shadow-dark);
+  box-shadow: 0 30px 24px -20px var(--shadow-dark);
   /*padding: calc(var(--standard-padding) * 6);*/
   width: 85%;
   transition: 0.4s;}
 
 .card:hover{
-  box-shadow: 0 30px 48px 0 var(--shadow-dark);
+  box-shadow: 0 10px 14px 0 var(--shadow-dark);
 }
 
 .card img {
@@ -459,5 +465,15 @@ main {
     font-size: clamp(60%, 1rem + 2vw, 1.5rem);
     padding: var(--standard-padding);
     margin: var(--standard-margin);
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .shopping-grid{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
   }
 }

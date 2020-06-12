@@ -73,3 +73,33 @@ body {
     background-image: -webkit-linear-gradient(45deg, #e73838 50%, #ffffff 100%);
     background-image: linear-gradient(45deg, #e73838 50%, #ffffff 100%);
 }
+
+.faq{
+  margin: calc(var(--standard-margin) * 6);
+}
+
+h1{
+  font-weight: 400;
+  color: rgba(128,128,128);
+  font-size: 50px;
+  text-align: center;
+
+}
+h3{
+  font-family: Arial;
+  color: rgba(128,128,128);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: .1em;
+  line-height: 1.6em;
+}
+
+.faqans{
+  color:rgba(128,128,128);
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: .02em;
+  
+
+}
