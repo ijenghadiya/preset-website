@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <h1>Subscribe Form</h1>
+    <form method="POST">
+
+        {% csrf_token %}
+        <div>
+            <p>
+            <h3>{{ form.as_p }}</h3>
+        </p>
+            <br>
+            <input type="submit" name="Subscribe">
+                </div>
+            </form>
+
+{% endblock %}
